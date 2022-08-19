@@ -4,18 +4,21 @@ import {TaskInputField} from './components/TaskInputField.js';
 import {TaskItem} from './components/TaskItem.js';
 
 export default function App() {
+  //task is current task
   const [tasks, setTasks] = useState([]);
-
+  //if there is a task, add tasks to array
   const addTask = (task) => {
     if (task == null) return;
     setTasks([...tasks, task]);
     Keyboard.dismiss();
   }
-
+  //tasks is now only tasks where index is not deleteindex
   const deleteTask = (deleteIndex) => {
     setTasks(tasks.filter((value, index) => index != deleteIndex));
   }
+  //pass add and delete functions down to components, when push they are called
 
+  //delete () => from deleteTask? check anonymous stuff passed down
   return (
     <View style={styles.container}>
         <Text style={styles.heading}>TODO LIST</Text>

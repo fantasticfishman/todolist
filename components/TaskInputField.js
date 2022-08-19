@@ -4,12 +4,12 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 export const TaskInputField = (props) => {
     const [task, setTask] = useState();
-
+    
     const handleAddTask = (value) => {
         props.addTask(value);
         setTask(null);
     }
-
+    //note:keyboard avoiding view moves up for keyboard, and touchableopacity dims when pressed
     return (
         <KeyboardAvoidingView 
         behavior={Platform.OS === "ios" ? "padding" : "height"}

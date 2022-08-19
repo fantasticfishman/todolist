@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 
 export const TaskItem = (props) => {
+    //return text of current index, delete index when delete button pushed
     return (
         <View style={styles.container}>
             <View style={styles.indexContainer}>
