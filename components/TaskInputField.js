@@ -94,7 +94,16 @@ export const TaskInputField = (props) => {
                   cancelable: true,
                 }
               );
-            } else {
+            } else if(new Date().getTime() > date.getTime()){
+              return Alert.alert(
+                "Yikes.",
+                "Looks like you set a due date before the current date. You don't work that fast, do you?",
+                [{ text: "Confirm" }],
+                {
+                  cancelable: true,
+                }
+              );
+            } else{
               handleAddTask();
             }
           }}
