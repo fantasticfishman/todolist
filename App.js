@@ -13,6 +13,7 @@ import bg from "./assets/bg.jpg";
 import Animated, { FadeInLeft, FadeOutRight } from "react-native-reanimated";
 
 export default function App() {
+  //task is current task
   const [tasks, setTasks] = useState([]);
   const [streak, setStreak] = useState(0);
   const addTask = (task) => {
@@ -30,7 +31,6 @@ export default function App() {
       })
     );
   };
-
   const deleteTask = (deleteIndex) => {
     if (tasks[deleteIndex].date.getTime() > new Date().getTime()) {
       setStreak(streak + 1);
@@ -56,6 +56,7 @@ export default function App() {
     const secondpart = fullstring.substr(start + 3);
     return firstpart + secondpart;
   }
+  //pass add and delete functions down to components, when push they are called
 
   useEffect(() => {
     return Alert.alert(
@@ -68,7 +69,6 @@ export default function App() {
     );
   }, []);
   //empty array means useeffect will only run once on app start
-
   return (
     <View style={styles.container}>
       <ImageBackground source={bg} resizeMode="cover" style={styles.image}>
