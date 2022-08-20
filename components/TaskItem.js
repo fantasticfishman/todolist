@@ -10,7 +10,7 @@ export const TaskItem = (props) => {
                 <Text style={styles.index}>{props.index}</Text>
             </View>
             <View style={styles.taskContainer}>
-                <Text style={styles.task}>{props.task}</Text>
+                <Text style={styles.task}>Task: {props.task} {"\n"}Due:{props.date}</Text>
                 <TouchableOpacity onPress={() => props.deleteTask()}>
                     <MaterialIcons style={styles.delete} name="delete" size={18} color='#fff' />
                 </TouchableOpacity>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     indexContainer: {
-        backgroundColor: '#3E3364',
+        backgroundColor: '#32185c',
         borderRadius: 12,
         marginRight: 10,
         alignItems: 'center',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     taskContainer: {
-        backgroundColor: '#3E3364',
+        backgroundColor: '#32185c',
         borderRadius: 12,
         flexDirection: 'row',
         justifyContent: 'space-between',
