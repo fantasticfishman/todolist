@@ -40,7 +40,7 @@ export default function App() {
       return Alert.alert(
         "Oh no!",
         "It looks like you've lost your streak. Don't worry, you got this next time!",
-        [{ text: "ok im sorry" }],
+        [{ text: "Whoopsie" }],
         {
           cancelable: true,
         }
