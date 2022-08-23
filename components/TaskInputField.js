@@ -8,6 +8,7 @@ import {
   Modal,
   Keyboard,
   Alert,
+  Platform
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import DateTimePicker from "@react-native-community/datetimepicker";
